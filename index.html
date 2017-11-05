@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="css/superslides.css">
+    <style type="text/css">
+        #header{
+            position: fixed;
+            width: 100vw;
+            height: 83px;
+            padding: 0px 30px;
+            z-index: 10;
+        }
+
+        #header nav#menu{
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 50px;
+            border-bottom: 3px solid rgba(255,255,255,0.2);
+        }
+
+        #header nav#menu #logo{
+            color: white;
+            line-height: 80px;
+            font-size: 30px;
+        }
+
+        #header nav#menu div#option ul#options_list{
+            display: flex;
+            align-items: center;
+            height: 80px;
+        }
+
+        #header nav#menu div#option ul#options_list li{
+            line-height: 32px;
+            display: inline-block;
+            height: 36px;
+            width: 100px;
+            margin:0px 10px;
+            text-align: center;
+            border: 2px solid white;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        #header nav#menu div#option ul#options_list li a{        
+            font-size: 16px;
+            text-decoration: none;
+            color: white;
+        }
+
+        @media(max-width: 720px)
+        {
+            #header{
+                padding: 0px;
+            }
+            #header nav#menu div#option ul#options_list{
+                flex-direction: column;
+                align-items: flex-start;
+                background-color: rgba(0,0,0,0.3);
+                height: 144px;
+                width: 100%;
+                position: absolute;
+                top:80px;
+                left: 0px;
+            }   
+
+            #header nav#menu div#option ul#options_list li{
+                border:0px;
+                border-radius: 0px;
+                width: 100%;
+                text-align: left;
+                margin: 0px;
+                padding: 0px 50px;
+                transition: background-color 1s;
+                transition: background-color 1s;
+            }
+
+            #header nav#menu div#option ul#options_list li:hover{
+                background-color: white;
+            }
+
+            #header nav#menu div#option ul#options_list li:hover a{        
+                color: black;
+            }
+        }
+    </style>
+
+    <style type="text/css">
+        div#inicio{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            color: white;
+
+            background-image: url("img/inicio3.png");
+            background-size: 100% 100%;
+            height: 100vh;
+            overflow: hidden;
+            transition: background-size 1s;
+        }
+
+        div#filter h1{
+            border-bottom: 1px solid white;
+            margin-bottom: 10px;
+        }
+
+        #filterC{
+            border:3px solid black;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        div#capturas{
+            background-image: url("img/c3.jpg");
+            background-size: 100% 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+        }
+
+        #cont{
+            width: 800px;
+        }
+
+        #slides{
+            max-width: 800px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav id="menu">
+            <!--<img id="logo" src="img/prueba.png">-->
+            <h1 id="logo">Magic coliseum</h1>
+            <div id="option">
+                <ul id="options_list">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Capturas</a></li>
+                    <li><a href="">Option</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="inicio">
+        <h1>Comienza la batalla</h1>
+        <p>Comienza la masacre</p>
+    </div>
+
+    <div id="capturas">
+        <div id="filterf"></div>
+        <div id="cont">
+            <div id="slides">
+                <ul class="slides-container">
+                    <li>
+                        <img src="img/c1.png" alt="">
+                        <div id="filterC"></div>
+                        <div class="container">
+                          Slide one
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/c2.png" alt="">
+                        <div id="filterC"></div>
+                        <div class="container">
+                          Slide two
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/c3.png" alt="">
+                        <div id="filterC"></div>
+                        <div class="container">
+                         Slide two
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/c4.png" alt="">
+                        <div id="filterC"></div>
+                        <div class="container">
+                          Slide two
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/c5.png" alt="">
+                        <div id="filterC"></div>
+                        <div class="container">
+                         Slide two
+                        </div>
+                    </li>
+                </ul>
+                <nav class="slides-navigation">
+                    <a href="#" class="next">&#62</a>
+                    <a href="#" class="prev">&#60</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/navbar.js"></script>
+    <script type="text/javascript" src="js/jquery.superslides.js"></script>
+    <script type="text/javascript">
+    $(function() {
+      $('#slides').superslides({
+        inherit_width_from: '#slides',
+        inherit_height_from: '#slides'
+      });
+    });
+    </script>
+</body>
+</html>
