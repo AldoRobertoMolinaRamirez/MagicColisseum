@@ -19,15 +19,35 @@
         #header nav#menu{
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            height: 80px;
             padding: 0px 50px;
             border-bottom: 3px solid rgba(255,255,255,0.2);
         }
 
         #header nav#menu #logo{
-            color: white;
-            line-height: 80px;
-            font-size: 30px;
+            height: 70px;
+            width: 70px;
+            cursor: pointer;
         }
+
+        #header div#cont-menu-button{
+            display: none;
+        }
+
+        #header div#cont-menu-button input{
+            display: none;
+        }
+
+        #header div#cont-menu-button label{
+            font-size: 30px;
+            line-height: 30px;
+            color: white;
+            border: 1px solid white;
+            border-radius: 4px;
+            padding: 4px;
+            cursor: pointer;
+        } 
 
         #header nav#menu div#option ul#options_list{
             display: flex;
@@ -39,7 +59,7 @@
             line-height: 32px;
             display: inline-block;
             height: 36px;
-            width: 100px;
+            width: 110px;
             margin:0px 10px;
             text-align: center;
             border: 2px solid white;
@@ -53,31 +73,52 @@
             color: white;
         }
 
+        #header nav#menu div#option ul#options_list li:hover a{        
+             text-shadow: 0 0px 38px red, 0 0px 12px red;
+        }
+
         @media(max-width: 720px)
         {
             #header{
                 padding: 0px;
             }
+
+            #header div#cont-menu-button{
+                display: inline-block;
+            }
+
+            #header nav#menu div#option{
+                position: absolute;
+                top:80px;
+                left: 0px;
+                width: 100%;
+            }
+
             #header nav#menu div#option ul#options_list{
                 flex-direction: column;
                 align-items: flex-start;
                 background-color: rgba(0,0,0,0.3);
-                height: 144px;
+                height: 160px;
                 width: 100%;
-                position: absolute;
-                top:80px;
-                left: 0px;
             }   
 
             #header nav#menu div#option ul#options_list li{
                 border:0px;
                 border-radius: 0px;
+                height: 40px;
+                line-height: 40px;
                 width: 100%;
                 text-align: left;
                 margin: 0px;
                 padding: 0px 50px;
                 transition: background-color 1s;
                 transition: background-color 1s;
+            }
+
+            #header nav#menu div#option ul#options_list li a{        
+                font-size: 20px;
+                text-decoration: none;
+                color: white;
             }
 
             #header nav#menu div#option ul#options_list li:hover{
@@ -96,14 +137,19 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-size: 36px;
-            color: white;
+            font-size: 32px;
+            color: #f3e6d0;
 
             background-image: url("img/inicio3.png");
             background-size: 100% 100%;
-            height: 100vh;
+            height: 660px;
             overflow: hidden;
             transition: background-size 1s;
+        }
+
+        img#logo2{
+            height: 240px;
+            width: 240px;
         }
 
         div#filter h1{
@@ -133,8 +179,67 @@
         }
 
         #slides{
-            max-width: 800px;
-            height: 500px;
+            max-width: 900px;
+            height: 540px;
+            transition: all 1s;
+        }
+
+        @media(max-width: 1020px)
+        {
+            div#inicio{
+                height: 500px;
+                font-size: 26px;
+            }
+
+            img#logo2{
+                height: 200px;
+                width: 200px;
+            }
+
+            div#capturas{
+                height: 400px;
+            }
+
+            #cont{
+                width: 500px;
+            }
+
+            #slides{
+                max-width: 500px;
+                height: 340px;
+            }
+
+        }
+
+        @media(max-width: 720px)
+        {
+            div#inicio{
+                height: 300px;
+                font-size: 16px;
+            }
+
+            img#logo2{
+                height: 100px;
+                width: 100px;
+            }
+
+            div#capturas{
+                height: 300px;
+            }
+
+            #filterC{
+                border:2px solid black;
+            }
+
+            #cont{
+                width: 300px;
+            }
+
+            #slides{
+                max-width: 400px;
+                height: 240px;
+            }
+
         }
     </style>
 </head>
@@ -142,20 +247,25 @@
     <header id="header">
         <nav id="menu">
             <!--<img id="logo" src="img/prueba.png">-->
-            <h1 id="logo">Magic coliseum</h1>
+            <img id="logo" src="img/logo.png">
+            <div id="cont-menu-button">
+                <input id="menu-button" type="checkbox" name="">
+                <label for="menu-button"> &#9776</label>
+            </div>
             <div id="option">
                 <ul id="options_list">
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Capturas</a></li>
-                    <li><a href="">Option</a></li>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#capturas">Capturas</a></li>
+                    <li><a href="">Caracteristicas</a></li>
                     <li><a href="">Contacto</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <div id="inicio">
-        <h1>Comienza la batalla</h1>
-        <p>Comienza la masacre</p>
+        <img id="logo2" src="img/logo.png">
+        <h1>Sobrevive al coliseo</h1>
+        <p>Acaba con tus enemigos</p>
     </div>
 
     <div id="capturas">
@@ -206,16 +316,27 @@
             </div>
         </div>
     </div>
+    <div id="caracteristicas">
+        
+    </div>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/navbar.js"></script>
     <script type="text/javascript" src="js/jquery.superslides.js"></script>
-    <script type="text/javascript">
-    $(function() {
-      $('#slides').superslides({
+    <script type="text/javascript" src="js/smoothscrool.js"></script>
+    <script type="text/javascript"> 
+    $(document).ready(function() {
+
+      
+      function hola(){
+   $('#slides').superslides({
         inherit_width_from: '#slides',
         inherit_height_from: '#slides'
       });
+      }
+
+      setInterval(hola, 1000);
+
     });
     </script>
 </body>
