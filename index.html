@@ -7,129 +7,6 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
     <link rel="stylesheet" type="text/css" href="css/superslides.css">
-    <style type="text/css">
-        #header{
-            position: fixed;
-            width: 100vw;
-            height: 83px;
-            padding: 0px 30px;
-            z-index: 10;
-        }
-
-        #header nav#menu{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-            padding: 0px 50px;
-            border-bottom: 3px solid rgba(255,255,255,0.2);
-        }
-
-        #header nav#menu #logo{
-            height: 70px;
-            width: 70px;
-            cursor: pointer;
-        }
-
-        #header div#cont-menu-button{
-            display: none;
-        }
-
-        #header div#cont-menu-button input{
-            display: none;
-        }
-
-        #header div#cont-menu-button label{
-            font-size: 30px;
-            line-height: 30px;
-            color: white;
-            border: 1px solid white;
-            border-radius: 4px;
-            padding: 4px;
-            cursor: pointer;
-        } 
-
-        #header nav#menu div#option ul#options_list{
-            display: flex;
-            align-items: center;
-            height: 80px;
-        }
-
-        #header nav#menu div#option ul#options_list li{
-            line-height: 32px;
-            display: inline-block;
-            height: 36px;
-            width: 110px;
-            margin:0px 10px;
-            text-align: center;
-            border: 2px solid white;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-
-        #header nav#menu div#option ul#options_list li a{        
-            font-size: 14px;
-            text-decoration: none;
-            color: white;
-        }
-
-        #header nav#menu div#option ul#options_list li:hover a{        
-             text-shadow: 0 0px 38px red, 0 0px 12px red;
-        }
-
-        @media(max-width: 720px)
-        {
-            #header{
-                padding: 0px;
-            }
-
-            #header div#cont-menu-button{
-                display: inline-block;
-            }
-
-            #header nav#menu div#option{
-                position: absolute;
-                top:80px;
-                left: 0px;
-                width: 100%;
-            }
-
-            #header nav#menu div#option ul#options_list{
-                flex-direction: column;
-                align-items: flex-start;
-                background-color: rgba(0,0,0,0.3);
-                height: 160px;
-                width: 100%;
-            }   
-
-            #header nav#menu div#option ul#options_list li{
-                border:0px;
-                border-radius: 0px;
-                height: 40px;
-                line-height: 40px;
-                width: 100%;
-                text-align: left;
-                margin: 0px;
-                padding: 0px 50px;
-                transition: background-color 1s;
-                transition: background-color 1s;
-            }
-
-            #header nav#menu div#option ul#options_list li a{        
-                font-size: 20px;
-                text-decoration: none;
-                color: white;
-            }
-
-            #header nav#menu div#option ul#options_list li:hover{
-                background-color: white;
-            }
-
-            #header nav#menu div#option ul#options_list li:hover a{        
-                color: black;
-            }
-        }
-    </style>
 
     <style type="text/css">
 
@@ -146,12 +23,20 @@
             align-items: center;
         }
 
+        .row{
+            margin: 0px;
+        }
+
+        *::-webkit-input-placeholder {
+            color: rgba(255,255,255,0.5); 
+        } 
+
         div#inicio{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-image: url("img/inicio3.png");
+            background-image: url("img/inicio4.png");
             background-size: 100% 100%;
             background-attachment: fixed;
             height: 660px;
@@ -166,25 +51,33 @@
             font-size: 40px;
             color: #f3e6d0;
         }
-
-        img#logo2{
+        div#inicio img#logo2{
             height: 240px;
             width: 240px;
         }
 
-        div#filter h1{
-            border-bottom: 1px solid white;
-            margin-bottom: 10px;
+        div#descripcion{
+                        background-image: url("img/descripcion2.jpg");
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            height: 600px;
+            color: white;
+        }
+        div#descripcion img{
+            height: 500px;
+        } 
+        div#descripcion h1{
+            margin-top: 80px;
+            margin-bottom: 60px;
+            font-weight: bold;
+        }
+        div#descripcion p{
+            margin: 0px 50px;
+            display: inline-block;
+            font-size: 20px;
+            line-height: 30px;
         }
 
-        #filterC{
-            border:3px solid black;
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            background-color: rgba(0,0,0,0.5);
-        }
-        
         div#capturas{
             background-size: 100% 100%;
             display: flex;
@@ -192,13 +85,19 @@
             align-items: center;
             height: 600px;
         }
-        #filterf{
+        div#capturas #filterf{
             position: absolute;
             height: 130%;
             width: 100%;
-
             background-image: url("img/c6.png");
             background-size: 100% 100%;
+        }
+        div#capturas  #filterC{
+            border:3px solid black;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0,0,0,0.5);
         }
         div#capturas #cont{
             width: 800px;
@@ -210,12 +109,11 @@
         }
         div#caracteristicas{
             height: 600px;
-            background-image: url("img/caracteristicas.jpg");
+            background-image: url("img/caracteristicas.png");
             background-size: 100% 100%;
             background-attachment: fixed;
         }
         div#caracteristicas .row{
-            margin: 0px;
             padding-top: 200px;
         }
         div#caracteristicas .row .flex-class{
@@ -245,12 +143,60 @@
         div#caracteristicas .row .cont-caract .filter-caract{
             position: absolute;
             top:0;
-            background-color: rgba(0,0,0,.3);
+            background-color: rgba(0,0,0,.5);
             height: 280px;
             width: 100%;
         }
 
-        @media(max-width: 1020px)
+        div#contacto{
+            background-image: url("img/Contacto2.jpg");
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            height: 600px;
+            padding-top: 60px;
+        }
+        div#contacto #contact-cont{
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 30px 20px;
+        }
+        div#contacto h1{
+            color: white;
+            font-size: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        div#contacto input, div#contacto textarea{
+            background:none;
+            padding: 4px 8px;
+            border-radius: 2px;
+            border:none;
+            border-bottom: 1px solid white;
+            height: 40px;
+            width: 500px;
+            margin-bottom: 6px;
+            color: white;
+        }
+        div#contacto input:focus, div#contacto textarea:focus{
+            border-bottom: 1px solid #1DD3D3;
+        }
+        div#contacto textarea{
+            height: 140px;
+        }
+        div#contacto form button{
+            background: rgba(29,211,211,0.7);
+            height: 40px;
+            width: 500px;
+            font-size: 16px;
+            border: 1px solid #428487;
+            color: white;
+        }
+        
+        footer{
+            background-color: #130d06;
+            height: 50px;
+            color: white;
+        }
+        @media(max-width: 992px)
         {
             div#inicio{
                 height: 500px;
@@ -271,7 +217,7 @@
             div#capturas{
                 height: 400px;
             }
-             #filterf{
+            div#capturas #filterf{
                 height: 600px;
                 width: 100%;
             }
@@ -304,6 +250,27 @@
                 font-size: 18px;
             }
 
+            div#contacto{
+                padding-top: 60px;
+            }
+            div#contacto h1{
+                color: white;
+                font-size: 40px;
+                margin-bottom: 40px;
+            }
+            div#contacto input, div#contacto textarea{
+                height: 40px;
+                width: 400px;
+            }
+            div#contacto textarea{
+                height: 140px;
+            }
+            div#contacto form button{
+                height: 40px;
+                width: 400px;
+                font-size: 16px;
+            }
+
         }
 
         @media(max-width: 768px)
@@ -318,20 +285,34 @@
             div#inicio p{
                 font-size: 20px;
             }
-
             img#logo2{
                 height: 100px;
                 width: 100px;
             }
 
+            div#descripcion{
+               height: 500px;
+            }
+            div#descripcion h1{
+                margin-top: 40px;
+                margin-bottom: 30px;
+            }
+            div#descripcion img{
+                display: none;
+            }
+            div#descripcion p{
+                line-height: 24px;
+                margin: 0px 20px;
+            }
+
             div#capturas{
                 height: 300px;
             }
-            #filterf{
+            div#capturas #filterf{
                 height: 440px;
 
             }
-            #filterC{
+            div#capturas #filterC{
                 border:2px solid black;
             }
             div#capturas #cont{
@@ -362,8 +343,28 @@
             div#caracteristicas .row .cont-caract .filter-caract h5{
                 font-size: 14px;
             }
+            
+            div#contacto{
+                padding-top: 30px;
+                height: 480px;
+                background-image: url("img/Contacto3.jpg");
+            }
+            div#contacto #contact-cont{
+                padding: 20px 10px;
+            }
+            div#contacto input, div#contacto textarea{
+                height: 30px;
+                width: 280px;
+            }
+            div#contacto textarea{
+                height: 140px;
+            }
+            div#contacto form button{
+                height: 40px;
+                width: 280px;
+                font-size: 16px;
+            }
         }
-
 
         @media(max-width: 700px)
         {
@@ -382,27 +383,40 @@
     <header id="header">
         <nav id="menu">
             <!--<img id="logo" src="img/prueba.png">-->
-            <img id="logo" src="img/logo.png">
+            <img id="logo" src="img/logo2.png">
             <div id="cont-menu-button">
                 <input id="menu-button" type="checkbox" name="">
-                <label for="menu-button"> &#9776</label>
+                <label for="menu-button"> &#9776;</label>
             </div>
             <div id="option">
                 <ul id="options_list">
                     <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#descripcion">Descripcion</a></li>
                     <li><a href="#capturas">Capturas</a></li>
                     <li><a href="#caracteristicas">Caracteristicas</a></li>
-                    <li><a href="">Contacto</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <div id="inicio">
-        <img id="logo2" src="img/logo.png">
+        <img id="logo2" src="img/logo2.png">
         <h1>Sobrevive al coliseo</h1>
         <p>Acaba con tus enemigos</p>
     </div>
+    <div id="descripcion">  
+     <div class="row">
+            <div class="col-xs-0 col-sm-6 col-md-6 col-lg-6 flex-class">
+                    <img src="img/person.png">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 flex-class-col">
+                <h1>Descripcion</h1>
+                <p>Todos los años se reunen varios jovenes prometedores para demostrar su valia en el "Magic Colisseum", un evento donde pueden dar rienda suelta a sus habilidades y mientras tienen que enfrentarse a sus rivales en una feroz batalla campal, donde solo el mejor podra salir victorioso, y demostrar asi su supremacia, ante la mirada de las masas.
+                </p>
 
+            </div>
+        </div>
+    </div>
     <div id="capturas">
         <div id="filterf"></div>
         <div id="cont">
@@ -424,14 +438,10 @@
                         <img src="img/c4.png" alt="">
                         <div id="filterC"></div>
                     </li>
-                    <li>
-                        <img src="img/c5.png" alt="">
-                        <div id="filterC"></div>
-                    </li>
                 </ul>
                 <nav class="slides-navigation">
-                    <a href="#" class="next">&#62</a>
-                    <a href="#" class="prev">&#60</a>
+                    <a href="#" class="next">&#62;</a>
+                    <a href="#" class="prev">&#60;</a>
                 </nav>
             </div>
             </div>
@@ -440,7 +450,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 flex-class">
                 <div class="cont-caract">
-                    <img src="img/carac1.png">
+                    <img src="img/c5.png">
                     <div class="filter-caract flex-class-col">
                         <h5>Busca a tus enemigos</h5>
                     </div>
@@ -448,23 +458,43 @@
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 flex-class">
                 <div class="cont-caract">
-                    <img src="img/c1.png">
+                    <img src="img/carac1.png">
+                    <div class="filter-caract flex-class-col">
+                        <h5>Atento a tu entorno</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-4 col-lg-offset-0 col-lg-4 flex-class">
+                <div class="cont-caract">
+                    <img src="img/c7.png">
                     <div class="filter-caract flex-class-col">
                         <h5>Encuentra powerups,</h5>
                         <h5>para ganar ventaja</h5>
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-4 col-lg-offset-0 col-lg-4 flex-class">
-                <div class="cont-caract">
-                    <img src="img/c1.png">
-                    <div class="filter-caract flex-class-col">
-                        <h5>Atento a tu entorno</h5>
-                    </div>
+        </div>
+    </div>
+    <div id="contacto">
+        <div class="row">
+            <div  class="col-xs-12 col-sm-12 col-md-offset-5 col-md-6 col-lg-offset-6 col-lg-6 flex-class-col">
+                <div id="contact-cont">
+                <h1>Contacto</h1>
+                <form method="post">
+                    <p><input type="text" name="" class="validate" placeholder="*Nombre"></p> 
+                    <p><input type="text" name="" class="validate" placeholder="*Correo"></p> 
+                    <p><input type="text" name="" class="validate" placeholder="*Asunto"></p>
+                    <p><textarea class="validate" placeholder="*Mensaje"></textarea></p> 
+                    <button id="enviar">Enviar</button>
+                </form>
                 </div>
             </div>
         </div>
     </div>
+    <footer class="flex-class">
+        <h4>©MagicColisseum</h4>
+    </footer>
+ 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/navbar.js"></script>
     <script type="text/javascript" src="js/jquery.superslides.js"></script>
@@ -481,6 +511,53 @@
       }
 
       setInterval(hola, 1000);
+
+      $(".validate").blur(function(){
+                validacionBlur(this);
+            });
+
+            $("#enviar").click(function(e){
+                var bool = validacion();
+                if(!bool)
+                {
+                    e.preventDefault();
+                }
+            });
+
+            function validacion(){
+                var failed = true;
+                $(".validate").each(function(){
+                    var comp = $(this).val();
+                    if(comp=="")
+                    {
+                        $(this).css({"border-color":"red"});
+                        $(this).attr({"placeholder":"campo requerido"});
+                        failed=false;
+                    } else {
+                        $(this).css({"border-color":"green"});
+                    }
+                });
+
+                if (failed) 
+                {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            function validacionBlur(op){
+                var failed = true;
+                var comp = $(op).val();
+                if(comp=="")
+                {
+                    $(op).css({"border-color":"red"});
+                    $(op).attr({"placeholder":"campo requerido"});
+                    failed=false;
+                } else {
+                    $(op).css({"border-color":"green"});
+                }
+            }
 
     });
     </script>
