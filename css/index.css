@@ -136,6 +136,18 @@ div#caracteristicas .row .cont-caract .filter-caract{
     height: 280px;
     width: 100%;
 }
+div#entrevista{   
+ background-image: url("../img/descripcion.jpg");
+    background-size: 100% 100%;
+    height: 700px;
+    padding-top: 60px;
+}
+div#entrevista h1{
+  text-align: center;
+      color: white;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
 
 div#contacto{
     background-image: url("../img/contacto2.jpg");
